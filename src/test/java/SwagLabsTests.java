@@ -13,7 +13,7 @@ public class SwagLabsTests extends BeforeAfterEach{
     CheckoutYourInformation_Page checkoutYourInformationPage = new CheckoutYourInformation_Page();
     CheckoutOverview_Page checkoutOverviewPage = new CheckoutOverview_Page();
     CheckoutComplete_Page checkoutCompletePage = new CheckoutComplete_Page();
-   
+
 
     @Test
     @Order(1)
