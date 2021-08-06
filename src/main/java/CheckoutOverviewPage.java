@@ -4,7 +4,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selectors.*;
 
-public class CheckoutOverview_Page {
+public class CheckoutOverviewPage {
 
     SelenideElement finishButton = $("#finish");
     SelenideElement cancelButton = $("#cancel");
@@ -14,16 +14,14 @@ public class CheckoutOverview_Page {
 
 
 
-    public CheckoutComplete_Page clickFinishButton(){
+    public void clickFinishButton(){
         finishButton.click();
-        return new CheckoutComplete_Page();
     }
 
-    public ProductsPage clickCancelButton(){
+    public void clickCancelButton(){
         cancelButton.click();
-        return new ProductsPage();
-
     }
+
     public double getSum(){
         double sum = 0;
         for (SelenideElement selenideElement : prices) {

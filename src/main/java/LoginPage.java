@@ -1,5 +1,6 @@
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -9,10 +10,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage {
 
-    SelenideElement userNameField =$(By.id("user-name"));
-    SelenideElement loginField =$(By.id("password"));
-    SelenideElement loginButton =$(By.id("login-button"));
-
+    SelenideElement userNameField = $(By.id("user-name"));
+    SelenideElement loginField = $(By.id("password"));
+    SelenideElement loginButton = $(By.id("login-button"));
 
     void login() throws IOException {
         Properties props = new Properties();
@@ -22,14 +22,13 @@ public class LoginPage {
         loginButton.click();
     }
 
-    public void openLoginPage(){
+    public void openLoginPage() {
         open("https://www.saucedemo.com/");
     }
 
     public void openPageAndLogin() throws IOException {
         openLoginPage();
         login();
-
     }
 
 }

@@ -7,8 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ProductsPage {
 
-   public static SelenideElement productsTitle = $(byText("Products"));
-
+    SelenideElement productsTitle = $(byText("Products"));
     ElementsCollection products =$$ (".inventory_item_name");
     ElementsCollection addButtons =$$ (byXpath("//button[text()='Add to cart']"));
     SelenideElement shoppingCart = $ (".shopping_cart_link");
@@ -24,10 +23,9 @@ public class ProductsPage {
         }
     }
 
-    public CartPage makeThreeOrder(){
+    public void makeThreeOrder(){
         addThreeProductsToCart();
         clickCart();
-        return new CartPage();
     }
 
 

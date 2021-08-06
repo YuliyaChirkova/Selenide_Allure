@@ -1,13 +1,12 @@
 import com.codeborne.selenide.SelenideElement;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 import static com.codeborne.selenide.Selenide.$;
 
 
-public class CheckoutYourInformation_Page {
+public class CheckoutYourInformationPage {
 
     SelenideElement firstNameField = $("#first-name");
     SelenideElement lastNameField = $("#last-name");
@@ -23,16 +22,13 @@ public class CheckoutYourInformation_Page {
         zipField.val(props.getProperty("user.zip"));
     }
 
-
-    public CheckoutOverview_Page clickContinue() throws IOException {
+    public void clickContinue() throws IOException {
         setDataFields();
         continueButton.click();
-        return new CheckoutOverview_Page();
     }
 
-    public CartPage clickCancel() throws IOException {
+    public void clickCancel() throws IOException {
         setDataFields();
         cancelButton.click();
-        return new CartPage();
     }
 }

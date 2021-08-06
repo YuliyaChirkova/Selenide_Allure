@@ -10,16 +10,16 @@ public class SwagLabsTests extends BeforeAfterEach{
     LoginPage loginPage = new LoginPage();
     ProductsPage productsPage = new ProductsPage();
     CartPage cartPage = new CartPage();
-    CheckoutYourInformation_Page checkoutYourInformationPage = new CheckoutYourInformation_Page();
-    CheckoutOverview_Page checkoutOverviewPage = new CheckoutOverview_Page();
-    CheckoutComplete_Page checkoutCompletePage = new CheckoutComplete_Page();
+    CheckoutYourInformationPage checkoutYourInformationPage = new CheckoutYourInformationPage();
+    CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage();
+    CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage();
 
 
     @Test
     @Order(1)
     public void loginTest() throws IOException {
         loginPage.openPageAndLogin();
-        Assertions.assertEquals("PRODUCTS", ProductsPage.productsTitle.getText());
+        Assertions.assertEquals("PRODUCTS", productsPage.productsTitle.getText());
     }
 
     @Test
@@ -41,7 +41,7 @@ public class SwagLabsTests extends BeforeAfterEach{
         cartPage.clickCheckout();
         checkoutYourInformationPage.clickContinue();
         checkoutOverviewPage.clickCancelButton();
-        Assertions.assertEquals("PRODUCTS", ProductsPage.productsTitle.getText());
+        Assertions.assertEquals("PRODUCTS", productsPage.productsTitle.getText());
     }
 
     @Test
