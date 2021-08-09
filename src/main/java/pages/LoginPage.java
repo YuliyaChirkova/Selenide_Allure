@@ -1,3 +1,5 @@
+package pages;
+
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -10,9 +12,10 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage {
 
-    SelenideElement userNameField = $(By.id("user-name"));
-    SelenideElement loginField = $(By.id("password"));
-    SelenideElement loginButton = $(By.id("login-button"));
+    public SelenideElement userNameField = $(By.id("user-name"));
+    public SelenideElement loginField = $(By.id("password"));
+    public SelenideElement loginButton = $(By.id("login-button"));
+    public SelenideElement errorMessage = $(".error-message-container.error");
 
     void login() throws IOException {
         Properties props = new Properties();

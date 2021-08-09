@@ -1,3 +1,5 @@
+package pages;
+
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
@@ -7,9 +9,9 @@ import static com.codeborne.selenide.Selectors.*;
 
 public class CartPage {
 
-    SelenideElement continueButton = $("#continue-shopping");
-    SelenideElement checkOutButton = $("#checkout");
-    ElementsCollection orderList = $$(byText("Remove"));
+    public SelenideElement continueButton = $("#continue-shopping");
+    public SelenideElement checkOutButton = $("#checkout");
+    public ElementsCollection orderList = $$(byText("Remove"));
 
     public void clickCheckout() {
         checkOutButton.click();

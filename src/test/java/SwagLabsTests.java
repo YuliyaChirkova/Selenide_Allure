@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.*;
+import pages.*;
+
 import java.io.IOException;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -42,6 +44,7 @@ public class SwagLabsTests extends BeforeAfterEach{
         checkoutYourInformationPage.clickContinue();
         checkoutOverviewPage.clickCancelButton();
         Assertions.assertEquals("PRODUCTS", productsPage.productsTitle.getText());
+        cartPage.removeAllOrdersFromCart();
     }
 
     @Test

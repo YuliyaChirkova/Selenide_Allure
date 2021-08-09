@@ -1,3 +1,5 @@
+package pages;
+
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
@@ -6,11 +8,11 @@ import static com.codeborne.selenide.Selectors.*;
 
 public class CheckoutOverviewPage {
 
-    SelenideElement finishButton = $("#finish");
-    SelenideElement cancelButton = $("#cancel");
-    SelenideElement shoppingList = $ (".inventory_item_price");
-    ElementsCollection prices = $$(byXpath("//div[@class = 'inventory_item_price']"));
-    SelenideElement itemTotalPrice=$(".summary_subtotal_label");
+    public SelenideElement finishButton = $("#finish");
+    public SelenideElement cancelButton = $("#cancel");
+    public SelenideElement shoppingList = $ (".inventory_item_price");
+    public ElementsCollection prices = $$(byXpath("//div[@class = 'inventory_item_price']"));
+    public SelenideElement itemTotalPrice=$(".summary_subtotal_label");
 
 
 
