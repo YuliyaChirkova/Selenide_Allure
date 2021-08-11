@@ -4,8 +4,6 @@ import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import org.junit.jupiter.api.Assertions;
 import pages.LoginPage;
-import pages.ProductsPage;
-
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Steps {
 
     LoginPage loginPage = new LoginPage();
-    ProductsPage productsPage = new ProductsPage();
+
 
     @Допустим("открыта страница \"([^\"]*)\"$")
     public void openPage(String pageURL) {
