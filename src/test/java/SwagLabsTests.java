@@ -6,8 +6,7 @@ import java.io.IOException;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
-
-public class SwagLabsTests extends BeforeAfterEach{
+class SwagLabsTest extends BeforeAfterEach{
 
     LoginPage loginPage = new LoginPage();
     ProductsPage productsPage = new ProductsPage();
