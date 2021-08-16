@@ -2,6 +2,8 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selectors.*;
@@ -15,15 +17,17 @@ public class CheckoutOverviewPage {
     public SelenideElement itemTotalPrice=$(".summary_subtotal_label");
 
 
-
+    @Step("Нажатие на кнопку Подтвердить покупку товара")
     public void clickFinishButton(){
         finishButton.click();
     }
 
+    @Step("Нажатие на кнопку Отменить покупку товара")
     public void clickCancelButton(){
         cancelButton.click();
     }
 
+    @Step("Подсчет общей суммы товаров")
     public double getSum(){
         double sum = 0;
         for (SelenideElement selenideElement : prices) {

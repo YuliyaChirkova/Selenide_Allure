@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SelenidTests" />
+        <module name="AQA2_project" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Selenid+Allur" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

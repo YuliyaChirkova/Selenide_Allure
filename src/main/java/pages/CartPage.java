@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -25,6 +26,7 @@ public class CartPage {
         return orderList.size();
     }
 
+    @Step("Удаление всех товаров из корзины")
     public void removeAllOrdersFromCart() {
         int ordersCount = ordersCount();
         for (int i = 0; i < ordersCount; i++) {

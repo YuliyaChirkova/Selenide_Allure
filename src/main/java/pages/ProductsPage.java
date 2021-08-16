@@ -2,6 +2,8 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
+
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
@@ -24,7 +26,7 @@ public class ProductsPage {
             addButtons.get(i).click();
         }
     }
-
+    @Step("Добавление трех товаров в корзину")
     public void makeThreeOrder(){
         addThreeProductsToCart();
         clickCart();
